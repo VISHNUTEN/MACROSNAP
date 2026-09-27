@@ -1,0 +1,9 @@
+# Never commit secrets
+.streamlit/secrets.toml
+.env
+
+# Never commit Python virtual environments
+venv/
+
+# Never commit Python cache files
+__pycache__/
