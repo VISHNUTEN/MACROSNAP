@@ -60,3 +60,17 @@ Rules:
 
 Response to rewrite:
 """
+
+# Sent to the chat when the user asks for their daily summary, so Gemini can
+# turn everything logged today into one short WhatsApp-friendly message.
+SUMMARY_REQUEST_PROMPT = """
+Summarize everything the user has eaten today based on our conversation.
+
+Rules:
+- List each meal with its estimated calories and macros.
+- Give a daily total for calories, protein, carbs, and fat.
+- Be concise and conversational, like a text message.
+- Do NOT use markdown formatting. Write plain text only.
+- Do NOT invent meals or numbers that are not in our conversation.
+- Write only the summary itself, with no preamble.
+"""
